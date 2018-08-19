@@ -30,6 +30,12 @@
         }
         template {display: block;}
     </style>
+    <script type="text/javascript" src="data/v3/level-category.js"></script>
+    <script type="text/javascript" src="data/v3/cards.js"></script>
+    <script type="text/javascript" src="data/v3/levels.js"></script>
+    <script type="text/javascript" src="data/v3/challenge.js"></script>
+    <script type="text/javascript" src="data/v3/today.js"></script>
+    <script type="text/javascript" src="data/v3/ticket.js"></script>
     <script type="text/javascript">
         window.onerror = function(sMsg,sUrl,sLine){
             var log = sMsg + '：' + sUrl + ':' + sLine + ';';
@@ -82,7 +88,7 @@
                 <div class="mycard">
                     <h3>{{get_string('SUB_TITLE')}}</h3>
                     <p>
-                        其他版本：<a href="kr.html" target="_blank">韩文版</a>
+                        其他版本：<a href="kr-v2.html" target="_blank">韩文版</a>
                         <!-- <a href="https://evolcalculator.github.io/index-v1.html">{{get_string('PREV_VERSION')}}</a> -->
                         <br>
                         <h4>{{get_string('HELP')}}</h4>
@@ -2182,7 +2188,7 @@
     <p id="tips" data-strings="text">LOADING</p>
     <p id="ajax_tips" style="display: none;" data-strings="text">LOADING</p>
     <script type='text/javascript' src='js/vue.min.js'></script>
-    <script type="text/javascript" src="js/vm.js?v=2.3.45"></script>
+    <script type="text/javascript" src="js/vm-v2.js?v=2.3.45"></script>
     <script type="text/javascript">
     	$(document).ready(function(){
             $('[data-strings]').each(function(){
