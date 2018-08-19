@@ -4434,10 +4434,6 @@ var vm = new Vue({
                     return (b.type * 100 + b.category) - (a.type * 100 + a.category);
                 });
 
-                if (res.company) {
-                    self.company = res.company;
-                }
-
                 if (res.ticket) {
                     self.ticket = res.ticket;
                 }
@@ -4549,6 +4545,10 @@ var vm = new Vue({
                     }
                     if (self.empty(self.list)) {
                         self.nav = 'card';
+                    }
+
+                    if (res.company) {
+                        self.company = res.company;
                     }
 
                     if (is_auto_today && !self.empty(res.today) && self.empty(self.today)) {
