@@ -6,5 +6,4 @@ var new_level_category = {
 '4': 'COPY_BAIQI',
 '5': 'COPY_LIZEYAN',
 '6': 'COPY_ZHOUQILUO',
-'7': 'ooo'
 }
