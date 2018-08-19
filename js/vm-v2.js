@@ -3150,22 +3150,27 @@ var vm = new Vue({
             // self.levels.multiple = 2;
             self.levels.level = {};
             self.levels.cards = [];
-
             if (self.level != 0) {
                 $level_id = self.select[self.category][self.chapter][self.level];
                 return self.get_level($level_id);
             }
 
             $('#get_levels').button('loading');
-            $.ajax({
-                url: self.base_url + 'levels',
-                type: 'post',
-                data: {
-                    category: self.category,
-                    chapter: self.chapter,
-                    location: self.location
-                },
-                success: function(res) {
+            // $.ajax({
+            //     url: self.base_url + 'levels',
+            //     type: 'post',
+            //     data: {
+            //         category: self.category,
+            //         chapter: self.chapter,
+            //         location: self.location
+            //     },
+            //     success: function(res) {
+                    var res = {}
+                    res.status = 1
+                    res.list = new_levels.filter(function(item){
+                        return item.category == self.category && item.chapter == self.chapter
+                    })
+
                     if (res.status == 1) {
                         var list = res.list;
 
@@ -3229,14 +3234,16 @@ var vm = new Vue({
                     } else if (res.info) {
                         self.show_msg(self.get_string(res.info));
                     }
-                },
-                error: function(res) {
-                    self.show_msg(self.get_string('TIP_REQUEST_FAIL'));
-                },
-                complete: function() {
+
                     $('#get_levels').button('reset');
-                }
-            });
+            //     },
+            //     error: function(res) {
+            //         self.show_msg(self.get_string('TIP_REQUEST_FAIL'));
+            //     },
+            //     complete: function() {
+            //         $('#get_levels').button('reset');
+            //     }
+            // });
         },
         //单关计算
         get_level: function(id) {
@@ -3248,17 +3255,24 @@ var vm = new Vue({
                 }
                 self.levels.company[key] = self.company[key];
             }
+            
             self.reset_config();
 
             $('#get_levels').button('loading');
-            $.ajax({
-                url: self.base_url + 'level',
-                type: 'post',
-                data: {
-                    id: id,
-                    location: self.location
-                },
-                success: function(res) {
+            // $.ajax({
+            //     url: self.base_url + 'level',
+            //     type: 'post',
+            //     data: {
+            //         id: id,
+            //         location: self.location
+            //     },
+            //     success: function(res) {
+                    var res = {}
+                    res.status = 1
+                    res.level = new_levels.find(function(item){
+                        return item.id == id
+                    })
+
                     if (res.status == 1) {
                         var level = res.level;
                         var count = 0;
@@ -3269,9 +3283,12 @@ var vm = new Vue({
                                 count++;
                             }
                         }
+
+                        
                         level.count = count;
                         level.loop = loop;
                         level.half_score = Math.round((level.pass_score + level.full_score) / 2);
+
                         self.level = level.level;
                         self.levels.level = level;
 
@@ -3279,14 +3296,15 @@ var vm = new Vue({
                     } else if (res.info) {
                         self.show_msg(self.get_string(res.info));
                     }
-                },
-                error: function(res) {
-                    self.show_msg(self.get_string('TIP_REQUEST_FAIL'));
-                },
-                complete: function() {
                     $('#get_levels').button('reset');
-                }
-            });
+            //     },
+            //     error: function(res) {
+            //         self.show_msg(self.get_string('TIP_REQUEST_FAIL'));
+            //     },
+            //     complete: function() {
+            //         $('#get_levels').button('reset');
+            //     }
+            // });
         },
         reset_config: function() {
             this.levels.config = false;
@@ -3805,6 +3823,10 @@ var vm = new Vue({
                     location: self.location
                 },
                 success: function(res) {
+                var res = {}
+                res.status = 1
+                res.card = card
+
                     if (res.status == 1) {
                         var card = res.card;
                         var card_id = card.card_id;
@@ -4252,26 +4274,31 @@ var vm = new Vue({
         get_category_tag: function(category) {
             category = parseInt(category, 10);
             var ret = '';
-            switch (category) {
-                case 1:
-                    ret = this.get_string('DAY');
-                    break;
-                case 2:
-                    ret = this.get_string('NIGHT');
-                    break;
-                case 3:
-                    ret = this.get_string('COPY_XUMO');
-                    break;
-                case 4:
-                    ret = this.get_string('COPY_BAIQI');
-                    break;
-                case 5:
-                    ret = this.get_string('COPY_LIZEYAN');
-                    break;
-                case 6:
-                    ret = this.get_string('COPY_ZHOUQILUO');
-                    break;
+            if(new_level_category[category]){
+                ret = this.get_string(new_level_category[category])
+            }else{
+                throw 'get_category_tag method, 該關卡屬性找不到對應值'
             }
+            // switch (category) {
+            //     case 1:
+            //         ret = this.get_string('DAY');
+            //         break;
+            //     case 2:
+            //         ret = this.get_string('NIGHT');
+            //         break;
+            //     case 3:
+            //         ret = this.get_string('COPY_XUMO');
+            //         break;
+            //     case 4:
+            //         ret = this.get_string('COPY_BAIQI');
+            //         break;
+            //     case 5:
+            //         ret = this.get_string('COPY_LIZEYAN');
+            //         break;
+            //     case 6:
+            //         ret = this.get_string('COPY_ZHOUQILUO');
+            //         break;
+            // }
             return ret;
         },
         //票房主题
@@ -4332,152 +4359,192 @@ var vm = new Vue({
         load: function() {
             var self = this;
 
-            $.ajax({
-                url: self.base_url + 'init',
-                type: 'post',
-                data: {
-                    token: self.get_token(),
-                    location: self.location
-                },
-                success: function(res) {
-                    if (res.status == 1) {
-                        if(!res.maintenance){
-                            $('#app').show();
+            /** override  @author gesrt **/
+            var res = {}
+            var is_auto_today = new_today && new_today.isAuto &&　new_today.isAuto === true
+            res.status = 1
+            res.cards = new_cards
+            res.challenge = new_challenges
+            if(!is_auto_today){
+                res.today = new_today
+                self.today = res.today;
+                self.ticket_combine();               
+            }
+
+            res.ticket = new_tickets
+            res.maintenance = false
+
+            //組select
+            res.select = {}
+            for(var cat in new_level_category){
+                levelKeys = Object.keys(new_levels);
+                var filterCatKeys = levelKeys.filter(function(key){ return new_levels[key].category == cat });
+                var chapters = filterCatKeys.map(function(key){ return new_levels[key].chapter })
+                
+                res.select[cat] = {}
+                chapters.forEach(function(cha){
+                    res.select[cat][cha] = {}
+
+                    var filterLevKeys = levelKeys.filter(function(key){ return new_levels[key].category == cat && new_levels[key].chapter == cha });
+                    var levels = filterLevKeys.map(function(key){ return new_levels[key].level })
+                    levels.forEach(function(lev){
+                        var item = new_levels.find(function(c){ return c.category == cat && c.chapter == cha && c.level == lev })
+                        res.select[cat][cha][lev] = item.id
+                    })
+                })
+            }
+            /** override end **/
+
+            if (res.status == 1) {
+                if(!res.maintenance){
+                    $('#app').show();
+                }
+
+                self.select = res.select;
+                self.cards = res.cards;
+
+                self.card_list = [];
+                self.all_cards = [];
+                for (id in self.cards) {
+                    var card = self.cards[id];
+                    self.card_list.push(card.name);
+                    self.all_cards.push(card);
+                }
+                self.all_cards.sort(function(a, b) {
+                    return (b.type * 100 + b.category) - (a.type * 100 + a.category);
+                });
+
+                if (res.company) {
+                    self.company = res.company;
+                }
+
+                if (res.list) {
+                    self.list = res.list;
+                    self.my_cards = [];
+
+                    for (var i = 0; i < self.list.length; i++) {
+                        self.my_cards.push(self.list[i].card_id);
+                    }
+                }
+
+                if (res.ticket) {
+                    self.ticket = res.ticket;
+                }
+
+                if (res.challenge) {
+                    self.challenge = res.challenge;
+                }
+
+                self.challenge_reset();
+
+                if (!self.dom_init) {
+                    $('.typeahead').typeahead({
+                        source: self.card_list
+                    });
+
+                    $('.typeahead').click(function() {
+                        $(this).typeahead('lookup');
+                    });
+
+                    $('#card_typeahead').change(function() {
+                        var name = $(this).val();
+
+                        if (self.card_list.indexOf(name) >= 0) {
+                            self.card_select.name = name;
+                            $(this).val('');
+                            self.show_card();
                         }
+                    });
 
-                        self.select = res.select;
-                        self.cards = res.cards;
+                    $('#combine_typeahead').change(function() {
+                        var name = $(this).val();
 
-                        self.card_list = [];
-                        self.all_cards = [];
-                        for (id in self.cards) {
-                            var card = self.cards[id];
-                            self.card_list.push(card.name);
-                            self.all_cards.push(card);
-                        }
-                        self.all_cards.sort(function(a, b) {
-                            return (b.type * 100 + b.category) - (a.type * 100 + a.category);
-                        });
-
-                        if (res.company) {
-                            self.company = res.company;
-                        }
-
-                        if (res.list) {
-                            self.list = res.list;
-                            self.my_cards = [];
-
-                            for (var i = 0; i < self.list.length; i++) {
-                                self.my_cards.push(self.list[i].card_id);
+                        if (self.card_list.indexOf(name) >= 0) {
+                            for (id in self.cards) {
+                                if (self.cards[id].name == name) {
+                                    self.levels.select.card_id = id;
+                                    self.levels.select.category = self.cards[id].category;
+                                    self.levels.select.type = self.cards[id].type;
+                                    self.levels.select.name = self.cards[id].name;
+                                    break;
+                                }
                             }
+                            self.update_combine_select();
                         }
+                    });
 
-                        if (res.ticket) {
-                            self.ticket = res.ticket;
+                    $('#battle_typeahead').change(function() {
+                        var name = $(this).val();
+
+                        if (self.card_list.indexOf(name) >= 0) {
+                            for (id in self.cards) {
+                                if (self.cards[id].name == name) {
+                                    self.tickets.select.card_id = id;
+                                    self.tickets.select.category = self.cards[id].category;
+                                    self.tickets.select.type = self.cards[id].type;
+                                    self.tickets.select.name = self.cards[id].name;
+                                    break;
+                                }
+                            }
+                            self.update_battle_select();
                         }
+                    });
 
-                        if (res.challenge) {
-                            self.challenge = res.challenge;
+                    $('#challenge_typeahead').change(function() {
+                        var name = $(this).val();
+
+                        if (self.card_list.indexOf(name) >= 0) {
+                            for (id in self.cards) {
+                                if (self.cards[id].name == name) {
+                                    self.challenges.select.card_id = id;
+                                    self.challenges.select.category = self.cards[id].category;
+                                    self.challenges.select.type = self.cards[id].type;
+                                    self.challenges.select.name = self.cards[id].name;
+                                    break;
+                                }
+                            }
+                            self.update_challenge_select();
                         }
+                    });
 
+                    $('#navbar-menu ul li a').click(function() {
+                        $('#navbar-menu').collapse('hide');
+                    });
+
+                    self.dom_init = true;
+                }
+
+                if (self.empty(self.list)) {
+                    self.nav = 'card';
+                }
+            } else if (res.info) {
+                self.show_msg(self.get_string(res.info));
+            }
+
+            $('#ajax_tips').hide();
+
+            if(is_auto_today){
+                $.ajax({
+                    url: self.base_url + 'init',
+                    type: 'post',
+                    data: {
+                        token: self.get_token(),
+                        location: self.location
+                    },
+                    success: function(res) {
                         if (!self.empty(res.today) && self.empty(self.today)) {
                             self.today = res.today;
                             self.ticket_combine();
                         }
-
-                        self.challenge_reset();
-
-                        if (!self.dom_init) {
-                            $('.typeahead').typeahead({
-                                source: self.card_list
-                            });
-
-                            $('.typeahead').click(function() {
-                                $(this).typeahead('lookup');
-                            });
-
-                            $('#card_typeahead').change(function() {
-                                var name = $(this).val();
-
-                                if (self.card_list.indexOf(name) >= 0) {
-                                    self.card_select.name = name;
-                                    $(this).val('');
-                                    self.show_card();
-                                }
-                            });
-
-                            $('#combine_typeahead').change(function() {
-                                var name = $(this).val();
-
-                                if (self.card_list.indexOf(name) >= 0) {
-                                    for (id in self.cards) {
-                                        if (self.cards[id].name == name) {
-                                            self.levels.select.card_id = id;
-                                            self.levels.select.category = self.cards[id].category;
-                                            self.levels.select.type = self.cards[id].type;
-                                            self.levels.select.name = self.cards[id].name;
-                                            break;
-                                        }
-                                    }
-                                    self.update_combine_select();
-                                }
-                            });
-
-                            $('#battle_typeahead').change(function() {
-                                var name = $(this).val();
-
-                                if (self.card_list.indexOf(name) >= 0) {
-                                    for (id in self.cards) {
-                                        if (self.cards[id].name == name) {
-                                            self.tickets.select.card_id = id;
-                                            self.tickets.select.category = self.cards[id].category;
-                                            self.tickets.select.type = self.cards[id].type;
-                                            self.tickets.select.name = self.cards[id].name;
-                                            break;
-                                        }
-                                    }
-                                    self.update_battle_select();
-                                }
-                            });
-
-                            $('#challenge_typeahead').change(function() {
-                                var name = $(this).val();
-
-                                if (self.card_list.indexOf(name) >= 0) {
-                                    for (id in self.cards) {
-                                        if (self.cards[id].name == name) {
-                                            self.challenges.select.card_id = id;
-                                            self.challenges.select.category = self.cards[id].category;
-                                            self.challenges.select.type = self.cards[id].type;
-                                            self.challenges.select.name = self.cards[id].name;
-                                            break;
-                                        }
-                                    }
-                                    self.update_challenge_select();
-                                }
-                            });
-
-                            $('#navbar-menu ul li a').click(function() {
-                                $('#navbar-menu').collapse('hide');
-                            });
-
-                            self.dom_init = true;
-                        }
-
-                        if (self.empty(self.list)) {
-                            self.nav = 'card';
-                        }
-                    } else if (res.info) {
-                        self.show_msg(self.get_string(res.info));
+                    },
+                    error: function(res) {
+                        self.show_msg(self.get_string('TIP_REQUEST_FAIL'));
+                    },
+                    complete: function(){
+                        // $('#ajax_tips').hide();
                     }
-                },
-                error: function(res) {
-                    self.show_msg(self.get_string('TIP_REQUEST_FAIL'));
-                },
-                complete: function(){
-                    $('#ajax_tips').hide();
-                }
-            });
+                });
+            }
 
             var history = $.LS.get('history') || {};
             if (typeof(history) == 'string') {
