@@ -1,5 +1,5 @@
 var new_today = {
-   "isAuto": false,
+   "isAuto": true,
    "id":2129,
    "day":243,
    "ticket_id":6,
