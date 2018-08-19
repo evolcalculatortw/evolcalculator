@@ -1,7 +1,7 @@
 var new_tickets = [  
       {  
          "id":1,
-         "name":"喜剧大师",
+         "name":"喜劇大師",
          "decisiveness":9.56,
          "creativity":10.28,
          "kindness":11.33,
@@ -9,7 +9,7 @@ var new_tickets = [
       },
       {  
          "id":2,
-         "name":"公路冒险",
+         "name":"公路冒險",
          "decisiveness":10.28,
          "creativity":9.56,
          "kindness":12,
@@ -17,7 +17,7 @@ var new_tickets = [
       },
       {  
          "id":3,
-         "name":"悬念时刻",
+         "name":"懸念時刻",
          "decisiveness":9.56,
          "creativity":11.33,
          "kindness":10.28,
@@ -25,7 +25,7 @@ var new_tickets = [
       },
       {  
          "id":4,
-         "name":"惊悚记",
+         "name":"驚悚記",
          "decisiveness":10.28,
          "creativity":11.33,
          "kindness":12,
@@ -33,7 +33,7 @@ var new_tickets = [
       },
       {  
          "id":5,
-         "name":"战争年代",
+         "name":"戰爭年代",
          "decisiveness":9.56,
          "creativity":12,
          "kindness":10.28,
@@ -41,7 +41,7 @@ var new_tickets = [
       },
       {  
          "id":6,
-         "name":"西部边境",
+         "name":"西部邊境",
          "decisiveness":10.28,
          "creativity":12,
          "kindness":11.33,
@@ -49,7 +49,7 @@ var new_tickets = [
       },
       {  
          "id":7,
-         "name":"爱情的味道",
+         "name":"愛情的味道",
          "decisiveness":11.33,
          "creativity":10.28,
          "kindness":9.56,
@@ -57,7 +57,7 @@ var new_tickets = [
       },
       {  
          "id":8,
-         "name":"恐怖日记",
+         "name":"恐怖日記",
          "decisiveness":11.33,
          "creativity":9.56,
          "kindness":12,
@@ -65,7 +65,7 @@ var new_tickets = [
       },
       {  
          "id":9,
-         "name":"悲惨人生",
+         "name":"悲慘人生",
          "decisiveness":12,
          "creativity":11.33,
          "kindness":10.28,
@@ -73,7 +73,7 @@ var new_tickets = [
       },
       {  
          "id":10,
-         "name":"科幻契约",
+         "name":"科幻契約",
          "decisiveness":12,
          "creativity":9.56,
          "kindness":11.33,
