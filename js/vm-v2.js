@@ -3806,26 +3806,26 @@ var vm = new Vue({
             var data = self.predict_card(card.card_id, evolved, star, level);
             var prop = self.prop;
 
-            $.ajax({
-                url: self.base_url + 'save_card',
-                type: 'post',
-                data: {
-                    token: self.get_token(),
-                    card_id: card.card_id,
-                    evolved: evolved,
-                    star: star,
-                    level: level,
-                    decisiveness: data.decisiveness,
-                    creativity: data.creativity,
-                    kindness: data.kindness,
-                    activity: data.activity,
-                    user_correct: user_correct,
-                    location: self.location
-                },
-                success: function(res) {
-                // var res = {}
-                // res.status = 1
-                // res.card = card
+            // $.ajax({
+            //     url: self.base_url + 'save_card',
+            //     type: 'post',
+            //     data: {
+            //         token: self.get_token(),
+            //         card_id: card.card_id,
+            //         evolved: evolved,
+            //         star: star,
+            //         level: level,
+            //         decisiveness: data.decisiveness,
+            //         creativity: data.creativity,
+            //         kindness: data.kindness,
+            //         activity: data.activity,
+            //         user_correct: user_correct,
+            //         location: self.location
+            //     },
+            //     success: function(res) {
+                var res = {}
+                res.status = 1
+                res.card = card
 
                     if (res.status == 1) {
                         var card = res.card;
@@ -3857,11 +3857,11 @@ var vm = new Vue({
                     } else if (res.info) {
                         self.show_msg(self.get_string(res.info));
                     }
-                },
-                error: function(res) {
-                    self.show_msg(self.get_string('TIP_REQUEST_FAIL'));
-                }
-            });
+        //         },
+        //         error: function(res) {
+        //             self.show_msg(self.get_string('TIP_REQUEST_FAIL'));
+        //         }
+        //     });
         },
         //保存羁绊
         save_card: function() {
@@ -3877,23 +3877,29 @@ var vm = new Vue({
                 }
             }
 
-            $.ajax({
-                url: self.base_url + 'save_card',
-                type: 'post',
-                data: {
-                    token: self.get_token(),
-                    card_id: self.card_select.card_id,
-                    evolved: self.card_select.evolved,
-                    star: self.card_select.star,
-                    level: self.card_select.level,
-                    decisiveness: self.card_select.decisiveness,
-                    creativity: self.card_select.creativity,
-                    kindness: self.card_select.kindness,
-                    activity: self.card_select.activity,
-                    user_correct: user_correct,
-                    location: self.location
-                },
-                success: function(res) {
+
+            // $.ajax({
+            //     url: self.base_url + 'save_card',
+            //     type: 'post',
+            //     data: {
+            //         token: self.get_token(),
+            //         card_id: self.card_select.card_id,
+            //         evolved: self.card_select.evolved,
+            //         star: self.card_select.star,
+            //         level: self.card_select.level,
+            //         decisiveness: self.card_select.decisiveness,
+            //         creativity: self.card_select.creativity,
+            //         kindness: self.card_select.kindness,
+            //         activity: self.card_select.activity,
+            //         user_correct: user_correct,
+            //         location: self.location
+            //     },
+            //     success: function(res) {
+                    var res = {}
+                    res.status = 1
+                    res.card = Object.assign({}, self.card_select)
+                    res.card.card_id = Number(res.card.card_id)
+
                     if (res.status == 1) {
                         var card = res.card;
                         var card_id = card.card_id;
@@ -3926,14 +3932,15 @@ var vm = new Vue({
                     } else if (res.info) {
                         self.show_msg(self.get_string(res.info));
                     }
-                },
-                error: function(res) {
-                    self.show_msg(self.get_string('TIP_REQUEST_FAIL'));
-                },
-                complete: function() {
                     $('#save_card').button('reset');
-                }
-            });
+            //     },
+            //     error: function(res) {
+            //         self.show_msg(self.get_string('TIP_REQUEST_FAIL'));
+            //     },
+            //     complete: function() {
+            //         $('#save_card').button('reset');
+            //     }
+            // });
         },
         remove_all: function() {
             var ack = confirm(this.get_string('TIP_CLEAR'));
@@ -3968,15 +3975,18 @@ var vm = new Vue({
             var ack = confirm(this.get_string('TIP_DELETE'));
             if (ack) {
                 var self = this;
-                $.ajax({
-                    url: self.base_url + 'remove_card',
-                    type: 'post',
-                    data: {
-                        token: self.get_token(),
-                        card_id: id,
-                        location: self.location
-                    },
-                    success: function(res) {
+                // $.ajax({
+                //     url: self.base_url + 'remove_card',
+                //     type: 'post',
+                //     data: {
+                //         token: self.get_token(),
+                //         card_id: id,
+                //         location: self.location
+                //     },
+                //     success: function(res) {
+                        res = {}
+                        res.status = 1
+                        
                         if (res.status == 1) {
                             var idx = self.my_cards.indexOf(id);
                             self.my_cards.splice(idx, 1);
@@ -3984,11 +3994,11 @@ var vm = new Vue({
                         } else if (res.info) {
                             self.show_msg(self.get_string(res.info));
                         }
-                    },
-                    error: function(res) {
-                        self.show_msg(self.get_string('TIP_REQUEST_FAIL'));
-                    }
-                });
+                //     },
+                //     error: function(res) {
+                //         self.show_msg(self.get_string('TIP_REQUEST_FAIL'));
+                //     }
+                // });
             }
         },
         //显示羁绊选择
