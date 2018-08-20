@@ -11,7 +11,7 @@ var new_challenges = [
       },
       {  
          "id":2,
-         "name":"头脑风暴",
+         "name":"頭腦風暴",
          "decisiveness":9.4,
          "creativity":11,
          "kindness":10.6,
@@ -21,7 +21,7 @@ var new_challenges = [
       },
       {  
          "id":3,
-         "name":"烧脑游戏",
+         "name":"燒腦遊戲",
          "decisiveness":9.4,
          "creativity":10.6,
          "kindness":11,
@@ -31,7 +31,7 @@ var new_challenges = [
       },
       {  
          "id":4,
-         "name":"我们都是大侦探",
+         "name":"我們都是大偵探",
          "decisiveness":9,
          "creativity":10.6,
          "kindness":9.4,
@@ -41,7 +41,7 @@ var new_challenges = [
       },
       {  
          "id":5,
-         "name":"犯罪现场",
+         "name":"犯罪現場",
          "decisiveness":11,
          "creativity":10.6,
          "kindness":9.4,
@@ -51,7 +51,7 @@ var new_challenges = [
       },
       {  
          "id":6,
-         "name":"天黑请闭眼",
+         "name":"天黑請閉眼",
          "decisiveness":9,
          "creativity":11,
          "kindness":9.4,
@@ -61,7 +61,7 @@ var new_challenges = [
       },
       {  
          "id":7,
-         "name":"疯狂的大脑",
+         "name":"瘋狂的大腦",
          "decisiveness":10.6,
          "creativity":9,
          "kindness":11,
@@ -71,7 +71,7 @@ var new_challenges = [
       },
       {  
          "id":8,
-         "name":"挑战最强者",
+         "name":"挑戰最強者",
          "decisiveness":9.4,
          "creativity":10.6,
          "kindness":9,
@@ -81,7 +81,7 @@ var new_challenges = [
       },
       {  
          "id":9,
-         "name":"谁是凶手",
+         "name":"誰是兇手",
          "decisiveness":11,
          "creativity":9.4,
          "kindness":9,
@@ -91,7 +91,7 @@ var new_challenges = [
       },
       {  
          "id":10,
-         "name":"心理大师",
+         "name":"心理大師",
          "decisiveness":9.4,
          "creativity":11,
          "kindness":10.6,
@@ -101,7 +101,7 @@ var new_challenges = [
       },
       {  
          "id":11,
-         "name":"寻宝游戏",
+         "name":"尋寶遊戲",
          "decisiveness":9.4,
          "creativity":10.6,
          "kindness":11,
@@ -111,7 +111,7 @@ var new_challenges = [
       },
       {  
          "id":12,
-         "name":"生还游戏",
+         "name":"生還遊戲",
          "decisiveness":9,
          "creativity":10.6,
          "kindness":9.4,
@@ -121,7 +121,7 @@ var new_challenges = [
       },
       {  
          "id":13,
-         "name":"三国游戏",
+         "name":"三國遊戲",
          "decisiveness":13,
          "creativity":7,
          "kindness":9,
@@ -151,7 +151,7 @@ var new_challenges = [
       },
       {  
          "id":16,
-         "name":"推理演绎",
+         "name":"推理演繹",
          "decisiveness":11,
          "creativity":9,
          "kindness":7,
@@ -161,7 +161,7 @@ var new_challenges = [
       },
       {  
          "id":17,
-         "name":"消失的记忆",
+         "name":"消失的記憶",
          "decisiveness":13,
          "creativity":11,
          "kindness":7,
@@ -171,7 +171,7 @@ var new_challenges = [
       },
       {  
          "id":18,
-         "name":"记忆操控",
+         "name":"記憶操控",
          "decisiveness":11,
          "creativity":13,
          "kindness":7,
@@ -181,7 +181,7 @@ var new_challenges = [
       },
       {  
          "id":19,
-         "name":"大唐探案录",
+         "name":"大唐探案錄",
          "decisiveness":5,
          "creativity":8,
          "kindness":15,
@@ -191,7 +191,7 @@ var new_challenges = [
       },
       {  
          "id":20,
-         "name":"特殊案件调查组",
+         "name":"特殊案件調查組",
          "decisiveness":8,
          "creativity":12,
          "kindness":5,
@@ -201,7 +201,7 @@ var new_challenges = [
       },
       {  
          "id":21,
-         "name":"谎言测量者",
+         "name":"謊言測量者",
          "decisiveness":15,
          "creativity":12,
          "kindness":5,
@@ -221,7 +221,7 @@ var new_challenges = [
       },
       {  
          "id":23,
-         "name":"黑暗童话",
+         "name":"黑暗童話",
          "decisiveness":4,
          "creativity":12,
          "kindness":17,
@@ -231,7 +231,7 @@ var new_challenges = [
       },
       {  
          "id":24,
-         "name":"追踪犯人",
+         "name":"追蹤犯人",
          "decisiveness":7,
          "creativity":12,
          "kindness":4,
@@ -241,7 +241,7 @@ var new_challenges = [
       },
       {  
          "id":25,
-         "name":"最美诗词",
+         "name":"最美詩詞",
          "decisiveness":11,
          "creativity":10.6,
          "kindness":9.4,
@@ -261,7 +261,7 @@ var new_challenges = [
       },
       {  
          "id":27,
-         "name":"博物馆物语",
+         "name":"博物館物語",
          "decisiveness":10.6,
          "creativity":9,
          "kindness":11,
@@ -271,7 +271,7 @@ var new_challenges = [
       },
       {  
          "id":28,
-         "name":"成语接龙",
+         "name":"成語接龍",
          "decisiveness":9.4,
          "creativity":10.6,
          "kindness":9,
@@ -281,7 +281,7 @@ var new_challenges = [
       },
       {  
          "id":29,
-         "name":"穿越千年遇见你",
+         "name":"穿越千年遇見你",
          "decisiveness":11,
          "creativity":9.4,
          "kindness":9,
@@ -291,7 +291,7 @@ var new_challenges = [
       },
       {  
          "id":30,
-         "name":"古词今唱",
+         "name":"古詞吟唱",
          "decisiveness":9.4,
          "creativity":11,
          "kindness":10.6,
@@ -301,7 +301,7 @@ var new_challenges = [
       },
       {  
          "id":31,
-         "name":"了不起的建筑",
+         "name":"了不起的建築",
          "decisiveness":9.4,
          "creativity":10.6,
          "kindness":11,
@@ -311,7 +311,7 @@ var new_challenges = [
       },
       {  
          "id":32,
-         "name":"汉字大会",
+         "name":"漢字大會",
          "decisiveness":9,
          "creativity":10.6,
          "kindness":9.4,
@@ -321,7 +321,7 @@ var new_challenges = [
       },
       {  
          "id":33,
-         "name":"听画",
+         "name":"聽畫",
          "decisiveness":11,
          "creativity":9,
          "kindness":10.6,
@@ -331,7 +331,7 @@ var new_challenges = [
       },
       {  
          "id":34,
-         "name":"众说",
+         "name":"眾說",
          "decisiveness":9.4,
          "creativity":11,
          "kindness":10.6,
@@ -341,7 +341,7 @@ var new_challenges = [
       },
       {  
          "id":35,
-         "name":"中国好手艺",
+         "name":"中國好手藝",
          "decisiveness":9.4,
          "creativity":10.6,
          "kindness":11,
@@ -351,7 +351,7 @@ var new_challenges = [
       },
       {  
          "id":36,
-         "name":"走近历史",
+         "name":"走進歷史",
          "decisiveness":9,
          "creativity":10.6,
          "kindness":9.4,
@@ -361,7 +361,7 @@ var new_challenges = [
       },
       {  
          "id":37,
-         "name":"南腔北调",
+         "name":"南腔北調",
          "decisiveness":11,
          "creativity":7,
          "kindness":13,
@@ -371,7 +371,7 @@ var new_challenges = [
       },
       {  
          "id":38,
-         "name":"非常姓运",
+         "name":"非常姓運",
          "decisiveness":11,
          "creativity":9,
          "kindness":7,
@@ -381,7 +381,7 @@ var new_challenges = [
       },
       {  
          "id":39,
-         "name":"为你写诗",
+         "name":"為你寫詩",
          "decisiveness":13,
          "creativity":11,
          "kindness":7,
@@ -391,7 +391,7 @@ var new_challenges = [
       },
       {  
          "id":40,
-         "name":"古代女子图鉴",
+         "name":"古代女子圖鑑",
          "decisiveness":11,
          "creativity":13,
          "kindness":7,
@@ -411,7 +411,7 @@ var new_challenges = [
       },
       {  
          "id":42,
-         "name":"少年派的辩答",
+         "name":"少年派的辯答",
          "decisiveness":9,
          "creativity":13,
          "kindness":7,
@@ -421,7 +421,7 @@ var new_challenges = [
       },
       {  
          "id":43,
-         "name":"中华服饰",
+         "name":"中華服飾",
          "decisiveness":8,
          "creativity":12,
          "kindness":5,
@@ -441,7 +441,7 @@ var new_challenges = [
       },
       {  
          "id":45,
-         "name":"厉害了，我的武功",
+         "name":"厲害了，我的武功",
          "decisiveness":5,
          "creativity":8,
          "kindness":15,
@@ -451,7 +451,7 @@ var new_challenges = [
       },
       {  
          "id":46,
-         "name":"中国密码",
+         "name":"中國密碼",
          "decisiveness":4,
          "creativity":12,
          "kindness":17,
@@ -461,7 +461,7 @@ var new_challenges = [
       },
       {  
          "id":47,
-         "name":"读书",
+         "name":"讀書",
          "decisiveness":7,
          "creativity":12,
          "kindness":4,
@@ -471,7 +471,7 @@ var new_challenges = [
       },
       {  
          "id":48,
-         "name":"手艺的传承",
+         "name":"手藝的傳承",
          "decisiveness":17,
          "creativity":4,
          "kindness":7,
@@ -491,7 +491,7 @@ var new_challenges = [
       },
       {  
          "id":50,
-         "name":"美食的诱惑",
+         "name":"美食的誘惑",
          "decisiveness":9,
          "creativity":10.6,
          "kindness":9.4,
@@ -501,7 +501,7 @@ var new_challenges = [
       },
       {  
          "id":51,
-         "name":"吃货之旅",
+         "name":"吃貨之旅",
          "decisiveness":11,
          "creativity":9.4,
          "kindness":9,
@@ -531,7 +531,7 @@ var new_challenges = [
       },
       {  
          "id":54,
-         "name":"拜托了厨房",
+         "name":"拜託了廚房",
          "decisiveness":9.4,
          "creativity":11,
          "kindness":10.6,
@@ -561,7 +561,7 @@ var new_challenges = [
       },
       {  
          "id":57,
-         "name":"最强厨师",
+         "name":"最強廚師",
          "decisiveness":11,
          "creativity":10.6,
          "kindness":9.4,
@@ -571,7 +571,7 @@ var new_challenges = [
       },
       {  
          "id":58,
-         "name":"中国馆",
+         "name":"中國館",
          "decisiveness":9,
          "creativity":10.6,
          "kindness":9.4,
@@ -581,7 +581,7 @@ var new_challenges = [
       },
       {  
          "id":59,
-         "name":"美食的艺术",
+         "name":"美食的藝術",
          "decisiveness":10.6,
          "creativity":9,
          "kindness":11,
@@ -601,7 +601,7 @@ var new_challenges = [
       },
       {  
          "id":61,
-         "name":"舌尖上的历史",
+         "name":"舌尖上的歷史",
          "decisiveness":11,
          "creativity":9,
          "kindness":7,
@@ -611,7 +611,7 @@ var new_challenges = [
       },
       {  
          "id":62,
-         "name":"红楼美食",
+         "name":"紅樓美食",
          "decisiveness":13,
          "creativity":7,
          "kindness":9,
@@ -621,7 +621,7 @@ var new_challenges = [
       },
       {  
          "id":63,
-         "name":" 熟悉的味道",
+         "name":"熟悉的味道",
          "decisiveness":11,
          "creativity":7,
          "kindness":13,
@@ -631,7 +631,7 @@ var new_challenges = [
       },
       {  
          "id":64,
-         "name":"挑战高手",
+         "name":"挑戰高手",
          "decisiveness":13,
          "creativity":11,
          "kindness":7,
@@ -651,7 +651,7 @@ var new_challenges = [
       },
       {  
          "id":66,
-         "name":"甜心大师",
+         "name":"甜心大師",
          "decisiveness":11,
          "creativity":13,
          "kindness":7,
@@ -661,7 +661,7 @@ var new_challenges = [
       },
       {  
          "id":67,
-         "name":"恶魔的厨房",
+         "name":"惡魔的廚房",
          "decisiveness":12,
          "creativity":15,
          "kindness":5,
@@ -671,7 +671,7 @@ var new_challenges = [
       },
       {  
          "id":68,
-         "name":"加油吧，厨房",
+         "name":"加油吧，廚房",
          "decisiveness":8,
          "creativity":5,
          "kindness":15,
@@ -681,7 +681,7 @@ var new_challenges = [
       },
       {  
          "id":69,
-         "name":"美味的便当",
+         "name":"美味的便當",
          "decisiveness":15,
          "creativity":12,
          "kindness":8,
@@ -701,7 +701,7 @@ var new_challenges = [
       },
       {  
          "id":71,
-         "name":"大胃王挑战",
+         "name":"大胃王挑戰",
          "decisiveness":17,
          "creativity":12,
          "kindness":7,
@@ -721,7 +721,7 @@ var new_challenges = [
       },
       {  
          "id":73,
-         "name":"诗与远方",
+         "name":"詩與遠方",
          "decisiveness":9.4,
          "creativity":11,
          "kindness":10.6,
@@ -741,7 +741,7 @@ var new_challenges = [
       },
       {  
          "id":75,
-         "name":"朝圣之路",
+         "name":"朝聖之路",
          "decisiveness":9.4,
          "creativity":11,
          "kindness":10.6,
@@ -751,7 +751,7 @@ var new_challenges = [
       },
       {  
          "id":76,
-         "name":"丝绸之路",
+         "name":"絲綢之路",
          "decisiveness":9.4,
          "creativity":10.6,
          "kindness":11,
@@ -761,7 +761,7 @@ var new_challenges = [
       },
       {  
          "id":77,
-         "name":"徒步中国",
+         "name":"徒步中國",
          "decisiveness":9.4,
          "creativity":10.6,
          "kindness":11,
@@ -771,7 +771,7 @@ var new_challenges = [
       },
       {  
          "id":78,
-         "name":"寻找未知的风景",
+         "name":"尋找未知的風景",
          "decisiveness":11,
          "creativity":10.6,
          "kindness":9.4,
@@ -781,7 +781,7 @@ var new_challenges = [
       },
       {  
          "id":79,
-         "name":"危险之旅",
+         "name":"危險之旅",
          "decisiveness":9,
          "creativity":10.6,
          "kindness":9.4,
@@ -801,7 +801,7 @@ var new_challenges = [
       },
       {  
          "id":81,
-         "name":"万元之旅",
+         "name":"萬元之旅",
          "decisiveness":11,
          "creativity":9.4,
          "kindness":9,
@@ -811,7 +811,7 @@ var new_challenges = [
       },
       {  
          "id":82,
-         "name":"寻宝之旅",
+         "name":"尋寶之旅",
          "decisiveness":9.4,
          "creativity":10.6,
          "kindness":9,
@@ -821,7 +821,7 @@ var new_challenges = [
       },
       {  
          "id":83,
-         "name":"大自然的法则",
+         "name":"大自然的法則",
          "decisiveness":9,
          "creativity":11,
          "kindness":9.4,
@@ -831,7 +831,7 @@ var new_challenges = [
       },
       {  
          "id":84,
-         "name":"情侣在路上",
+         "name":"情侶在路上",
          "decisiveness":10.6,
          "creativity":9,
          "kindness":11,
@@ -841,7 +841,7 @@ var new_challenges = [
       },
       {  
          "id":85,
-         "name":"冒险王",
+         "name":"冒險王",
          "decisiveness":11,
          "creativity":9,
          "kindness":7,
@@ -851,7 +851,7 @@ var new_challenges = [
       },
       {  
          "id":86,
-         "name":"八十天环游地球",
+         "name":"八十天環遊地球",
          "decisiveness":9,
          "creativity":13,
          "kindness":7,
@@ -871,7 +871,7 @@ var new_challenges = [
       },
       {  
          "id":88,
-         "name":"西藏密码",
+         "name":"西藏密碼",
          "decisiveness":11,
          "creativity":13,
          "kindness":7,
@@ -891,7 +891,7 @@ var new_challenges = [
       },
       {  
          "id":90,
-         "name":"前往南极",
+         "name":"前往南極",
          "decisiveness":13,
          "creativity":11,
          "kindness":7,
@@ -901,7 +901,7 @@ var new_challenges = [
       },
       {  
          "id":91,
-         "name":"最佳客栈",
+         "name":"最佳客棧",
          "decisiveness":8,
          "creativity":5,
          "kindness":15,
@@ -911,7 +911,7 @@ var new_challenges = [
       },
       {  
          "id":92,
-         "name":"飞行日记",
+         "name":"飛行日記",
          "decisiveness":15,
          "creativity":12,
          "kindness":8,
@@ -921,7 +921,7 @@ var new_challenges = [
       },
       {  
          "id":93,
-         "name":"前往世界的尽头",
+         "name":"前往世界的盡頭",
          "decisiveness":12,
          "creativity":15,
          "kindness":5,
@@ -931,7 +931,7 @@ var new_challenges = [
       },
       {  
          "id":94,
-         "name":"火车之旅",
+         "name":"火車之旅",
          "decisiveness":17,
          "creativity":4,
          "kindness":12,
@@ -941,7 +941,7 @@ var new_challenges = [
       },
       {  
          "id":95,
-         "name":"遇见喜马拉雅",
+         "name":"遇見喜馬拉雅",
          "decisiveness":4,
          "creativity":17,
          "kindness":12,
