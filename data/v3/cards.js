@@ -1,7 +1,7 @@
 var new_cards = {
    "1":{
       "card_id":1,
-      "name":"李澤言·不要说话",
+      "name":"李澤言·不要說話",
       "category":1,
       "base":"120,43,3,105",
       "inc":"2409,865,55,2091",
@@ -13,7 +13,7 @@ var new_cards = {
       "evolved":1,
       "star":5,
       "level":40,
-      "gain":"许愿树",
+      "gain":"許願樹-金幣",
       "type":3,
       "top":1,
       "head":"31010,31011",
