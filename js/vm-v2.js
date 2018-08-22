@@ -4218,27 +4218,27 @@ var vm = new Vue({
         },
         //获取标签
         get_gain_tag: function(gain) {
-            if (gain.indexOf('副本') >= 0) {
+            if (gain.indexOf('拍攝副本') >= 0) {
                 return this.get_string('COPY');
             } else if (gain.indexOf('充值') >= 0) {
                 return this.get_string('PAY');
-            } else if (gain.indexOf('签到') >= 0) {
+            } else if (gain.indexOf('簽到') >= 0) {
                 return this.get_string('CHECKIN');
-            } else if (gain.indexOf('公测') >= 0) {
+            } else if (gain.indexOf('預約') >= 0) {
                 return this.get_string('OBT');
-            } else if (gain.indexOf('许愿') >= 0) {
+            } else if (gain.indexOf('許願樹') >= 0) {
                 return  this.get_string('DRAW');
             } else if (gain.indexOf('交易所') >= 0) {
                 return  this.get_string('EXCHANGE');
-            } else if (gain.indexOf('登录') >= 0) {
+            } else if (gain.indexOf('登入') >= 0) {
                 return this.get_string('GIFT');
-            } else if (gain.indexOf('24小时') >= 0) {
+            } else if (gain.indexOf('24小時') >= 0) {
                 return this.get_string('CHALLENGE');
-            } else if (gain.indexOf('梦心湖') >= 0) {
+            } else if (gain.indexOf('夢心湖') >= 0) {
                 return this.get_string('DISASTER');
             } else if (gain.indexOf('限定') >= 0) {
                 return this.get_string('LIMITED');
-            } else if (gain.indexOf('票房') >= 0) {
+            } else if (gain.indexOf('票房爭奪戰') >= 0) {
                 return this.get_string('TICKET');
             } else {
                 return this.get_string('OTHER');
